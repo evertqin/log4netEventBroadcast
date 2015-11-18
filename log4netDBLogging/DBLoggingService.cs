@@ -72,7 +72,7 @@ namespace log4netDBLogging
                 AppLog = UIUtils.LogApplicationOpen(_entMgr, applicationName, _entMgr.CurrentStaff);
             }
             //%d [%thread] %-5level %logger [%ndc] - %message%newline%exception
-            AppLog.Comments += loggingInfo.FormattedMessage + "\n";
+            AppLog.Comments += loggingInfo.FormattedMessage + "|";
             AppLog.Save();
 
         }
